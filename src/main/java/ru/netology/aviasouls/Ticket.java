@@ -38,11 +38,11 @@ public class Ticket implements Comparable<Ticket> {
         return timeTo;
     }
 
-    public int getFlyingTime(){
-        if(timeFrom < timeTo){
+    public int getFlyingTime() {
+        if (timeFrom < timeTo) {
             return timeTo - timeFrom;
         } else {
-            return (24-timeFrom) + timeTo;
+            return (24 - timeFrom) + timeTo;
         }
     }
 
@@ -62,9 +62,9 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket o) {
-        if(this.getPrice() < o.getPrice()){
+        if (this.getPrice() < o.getPrice()) {
             return -1;
-        } else if(this.getPrice() > o.getPrice()){
+        } else if (this.getPrice() > o.getPrice()) {
             return 1;
         } else {
             return 0;
